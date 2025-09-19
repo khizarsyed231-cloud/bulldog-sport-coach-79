@@ -26,16 +26,16 @@ const Analytics = () => {
         }
       },
       championsleague: {
-        name: "UEFA Champions League 2024-25 (Current Season)",
+        name: "UEFA Champions League 2024-25 (Knockout Stage)",
         teams: {
-          "liverpool": { name: "Liverpool", points: 18, wins: 6, draws: 0, losses: 0, goalsFor: 13, goalsAgainst: 1, topScorer: "Mohamed Salah (6 goals)", assists: "Cody Gakpo (3 assists)", ranking: 1 },
-          "barcelona": { name: "FC Barcelona", points: 15, wins: 5, draws: 0, losses: 1, goalsFor: 21, goalsAgainst: 7, topScorer: "Robert Lewandowski (7 goals)", assists: "Raphinha (4 assists)", ranking: 2 },
-          "arsenal": { name: "Arsenal", points: 13, wins: 4, draws: 1, losses: 1, goalsFor: 12, goalsAgainst: 2, topScorer: "Kai Havertz (4 goals)", assists: "Bukayo Saka (3 assists)", ranking: 3 },
-          "bayer-leverkusen": { name: "Bayer Leverkusen", points: 13, wins: 4, draws: 1, losses: 1, goalsFor: 12, goalsAgainst: 5, topScorer: "Florian Wirtz (3 goals)", assists: "Granit Xhaka (2 assists)", ranking: 4 },
-          "aston-villa": { name: "Aston Villa", points: 13, wins: 4, draws: 1, losses: 1, goalsFor: 9, goalsAgainst: 3, topScorer: "Jhon Durán (3 goals)", assists: "John McGinn (2 assists)", ranking: 5 },
-          "inter-milan": { name: "Inter Milan", points: 13, wins: 4, draws: 1, losses: 1, goalsFor: 7, goalsAgainst: 1, topScorer: "Lautaro Martínez (3 goals)", assists: "Nicolò Barella (2 assists)", ranking: 6 },
-          "brest": { name: "Stade Brestois", points: 13, wins: 4, draws: 1, losses: 1, goalsFor: 10, goalsAgainst: 6, topScorer: "Ludovic Ajorque (2 goals)", assists: "Romain Del Castillo (3 assists)", ranking: 7 },
-          "lille": { name: "Lille OSC", points: 13, wins: 4, draws: 1, losses: 1, goalsFor: 9, goalsAgainst: 5, topScorer: "Jonathan David (4 goals)", assists: "Edon Zhegrova (2 assists)", ranking: 8 }
+          "liverpool": { name: "Liverpool", points: 21, wins: 7, draws: 0, losses: 0, goalsFor: 17, goalsAgainst: 2, topScorer: "Mohamed Salah (8 goals)", assists: "Cody Gakpo (4 assists)", ranking: 1 },
+          "barcelona": { name: "FC Barcelona", points: 18, wins: 6, draws: 0, losses: 1, goalsFor: 26, goalsAgainst: 8, topScorer: "Robert Lewandowski (9 goals)", assists: "Raphinha (5 assists)", ranking: 2 },
+          "arsenal": { name: "Arsenal", points: 16, wins: 5, draws: 1, losses: 1, goalsFor: 15, goalsAgainst: 3, topScorer: "Kai Havertz (5 goals)", assists: "Bukayo Saka (4 assists)", ranking: 3 },
+          "inter-milan": { name: "Inter Milan", points: 16, wins: 5, draws: 1, losses: 1, goalsFor: 10, goalsAgainst: 2, topScorer: "Lautaro Martínez (4 goals)", assists: "Nicolò Barella (3 assists)", ranking: 4 },
+          "atletico-madrid": { name: "Atlético Madrid", points: 15, wins: 5, draws: 0, losses: 2, goalsFor: 13, goalsAgainst: 8, topScorer: "Antoine Griezmann (4 goals)", assists: "Koke (3 assists)", ranking: 5 },
+          "ac-milan": { name: "AC Milan", points: 15, wins: 5, draws: 0, losses: 2, goalsFor: 12, goalsAgainst: 9, topScorer: "Rafael Leão (3 goals)", assists: "Christian Pulisic (4 assists)", ranking: 6 },
+          "atalanta": { name: "Atalanta", points: 14, wins: 4, draws: 2, losses: 1, goalsFor: 16, goalsAgainst: 4, topScorer: "Ademola Lookman (5 goals)", assists: "Charles De Ketelaere (3 assists)", ranking: 7 },
+          "bayer-leverkusen": { name: "Bayer Leverkusen", points: 13, wins: 4, draws: 1, losses: 2, goalsFor: 14, goalsAgainst: 7, topScorer: "Florian Wirtz (4 goals)", assists: "Granit Xhaka (3 assists)", ranking: 8 }
         }
       },
       europaleague: {
@@ -49,18 +49,18 @@ const Analytics = () => {
       }
     },
     upcomingMatches: [
-      { home: "Argentina", away: "Peru", date: "2024-11-19", time: "21:00", competition: "World Cup Qualifiers" },
-      { home: "Liverpool", away: "Real Madrid", date: "2024-11-27", time: "20:00", competition: "Champions League" },
-      { home: "Brazil", away: "Uruguay", date: "2024-11-19", time: "21:45", competition: "World Cup Qualifiers" },
-      { home: "Barcelona", away: "Brest", date: "2024-11-26", time: "21:00", competition: "Champions League" },
-      { home: "West Ham", away: "Frankfurt", date: "2024-11-28", time: "18:45", competition: "Europa League" }
+      { home: "Argentina", away: "Peru", date: "2025-09-20", time: "21:00", competition: "World Cup Qualifiers" },
+      { home: "Liverpool", away: "Real Madrid", date: "2025-09-22", time: "20:00", competition: "Champions League Round of 16" },
+      { home: "Barcelona", away: "PSG", date: "2025-09-23", time: "21:00", competition: "Champions League Round of 16" },
+      { home: "Arsenal", away: "Bayern Munich", date: "2025-09-24", time: "20:00", competition: "Champions League Round of 16" },
+      { home: "Inter Milan", away: "Manchester City", date: "2025-09-25", time: "21:00", competition: "Champions League Round of 16" }
     ]
   };
 
   const basketballData = {
     competitions: {
       nba: {
-        name: "NBA 2024-25 Season (Current)",
+        name: "NBA 2024-25 Season (Regular Season)",
         teams: {
           "cleveland-cavaliers": { name: "Cleveland Cavaliers", wins: 12, losses: 0, points: 121.8, pointsAgainst: 109.4, topScorer: "Donovan Mitchell (24.3 PPG)", rebounds: "Jarrett Allen (10.5 RPG)", assists: "Darius Garland (6.5 APG)", ranking: 1, startingLineup: ["Darius Garland", "Donovan Mitchell", "Isaac Okoro", "Evan Mobley", "Jarrett Allen"] },
           "boston-celtics": { name: "Boston Celtics", wins: 9, losses: 3, points: 120.2, pointsAgainst: 110.6, topScorer: "Jayson Tatum (29.7 PPG)", rebounds: "Jayson Tatum (8.2 RPG)", assists: "Jaylen Brown (4.7 APG)", ranking: 2, startingLineup: ["Jrue Holiday", "Derrick White", "Jaylen Brown", "Jayson Tatum", "Al Horford"] },
@@ -74,11 +74,11 @@ const Analytics = () => {
       }
     },
     upcomingMatches: [
-      { home: "Cleveland Cavaliers", away: "Boston Celtics", date: "2024-11-19", time: "20:00", competition: "NBA Regular Season" },
-      { home: "Oklahoma City Thunder", away: "Golden State Warriors", date: "2024-11-20", time: "22:30", competition: "NBA Regular Season" },
-      { home: "Phoenix Suns", away: "Denver Nuggets", date: "2024-11-22", time: "21:00", competition: "NBA Regular Season" },
-      { home: "Los Angeles Lakers", away: "Miami Heat", date: "2024-11-24", time: "19:30", competition: "NBA Regular Season" },
-      { home: "Boston Celtics", away: "Oklahoma City Thunder", date: "2024-11-25", time: "20:30", competition: "NBA Regular Season" }
+      { home: "Boston Celtics", away: "Cleveland Cavaliers", date: "2025-09-20", time: "20:00", competition: "NBA Regular Season" },
+      { home: "Oklahoma City Thunder", away: "Denver Nuggets", date: "2025-09-21", time: "22:00", competition: "NBA Regular Season" },
+      { home: "Phoenix Suns", away: "Golden State Warriors", date: "2025-09-22", time: "22:30", competition: "NBA Regular Season" },
+      { home: "Los Angeles Lakers", away: "Miami Heat", date: "2025-09-23", time: "22:00", competition: "NBA Regular Season" },
+      { home: "Milwaukee Bucks", away: "Philadelphia 76ers", date: "2025-09-24", time: "20:00", competition: "NBA Regular Season" }
     ]
   };
 
@@ -122,11 +122,11 @@ const Analytics = () => {
       }
     },
     upcomingMatches: [
-      { home: "Buffalo Bills", away: "Kansas City Chiefs", date: "2024-11-17", time: "16:25", competition: "NFL Regular Season" },
-      { home: "Philadelphia Eagles", away: "Washington Commanders", date: "2024-11-21", time: "20:15", competition: "NFL Thursday Night Football" },
-      { home: "Detroit Lions", away: "Chicago Bears", date: "2024-11-28", time: "12:30", competition: "NFL Thanksgiving" },
-      { home: "Pittsburgh Steelers", away: "Cincinnati Bengals", date: "2024-12-01", time: "13:00", competition: "NFL Regular Season" },
-      { home: "Minnesota Vikings", away: "Green Bay Packers", date: "2024-12-01", time: "13:00", competition: "NFL Regular Season" }
+      { home: "Kansas City Chiefs", away: "Buffalo Bills", date: "2025-01-26", time: "18:30", competition: "AFC Championship Game" },
+      { home: "Philadelphia Eagles", away: "Detroit Lions", date: "2025-01-26", time: "15:00", competition: "NFC Championship Game" },
+      { home: "Super Bowl LIX", away: "TBD vs TBD", date: "2025-02-09", time: "18:30", competition: "Super Bowl LIX" },
+      { home: "Los Angeles Chargers", away: "Denver Broncos", date: "2025-09-22", time: "20:15", competition: "NFL Week 3 - 2025 Season" },
+      { home: "Green Bay Packers", away: "Minnesota Vikings", date: "2025-09-25", time: "13:00", competition: "NFL Week 3 - 2025 Season" }
     ]
   };
 
@@ -147,11 +147,11 @@ const Analytics = () => {
       }
     },
     upcomingRaces: [
-      { name: "Las Vegas Grand Prix", date: "2024-11-23", time: "22:00", circuit: "Las Vegas Street Circuit" },
-      { name: "Qatar Grand Prix", date: "2024-12-01", time: "17:00", circuit: "Lusail International Circuit" },
-      { name: "Abu Dhabi Grand Prix", date: "2024-12-08", time: "13:00", circuit: "Yas Marina Circuit" },
       { name: "Bahrain Grand Prix", date: "2025-03-16", time: "15:00", circuit: "Bahrain International Circuit" },
-      { name: "Saudi Arabian Grand Prix", date: "2025-03-23", time: "17:00", circuit: "Jeddah Corniche Circuit" }
+      { name: "Saudi Arabian Grand Prix", date: "2025-03-23", time: "17:00", circuit: "Jeddah Corniche Circuit" },
+      { name: "Australian Grand Prix", date: "2025-04-06", time: "06:00", circuit: "Albert Park Circuit" },
+      { name: "Chinese Grand Prix", date: "2025-04-20", time: "08:00", circuit: "Shanghai International Circuit" },
+      { name: "Miami Grand Prix", date: "2025-05-04", time: "16:00", circuit: "Miami International Autodrome" }
     ]
   };
 
