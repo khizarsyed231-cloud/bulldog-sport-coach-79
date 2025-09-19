@@ -26,7 +26,7 @@ const Analytics = () => {
         }
       },
       championsleague: {
-        name: "UEFA Champions League 2024-25",
+        name: "UEFA Champions League 2024-25 (Current Season)",
         teams: {
           "liverpool": { name: "Liverpool", points: 18, wins: 6, draws: 0, losses: 0, goalsFor: 13, goalsAgainst: 1, topScorer: "Mohamed Salah (6 goals)", assists: "Cody Gakpo (3 assists)", ranking: 1 },
           "barcelona": { name: "FC Barcelona", points: 15, wins: 5, draws: 0, losses: 1, goalsFor: 21, goalsAgainst: 7, topScorer: "Robert Lewandowski (7 goals)", assists: "Raphinha (4 assists)", ranking: 2 },
@@ -60,7 +60,7 @@ const Analytics = () => {
   const basketballData = {
     competitions: {
       nba: {
-        name: "NBA 2024-25 Season",
+        name: "NBA 2024-25 Season (Current)",
         teams: {
           "cleveland-cavaliers": { name: "Cleveland Cavaliers", wins: 12, losses: 0, points: 121.8, pointsAgainst: 109.4, topScorer: "Donovan Mitchell (24.3 PPG)", rebounds: "Jarrett Allen (10.5 RPG)", assists: "Darius Garland (6.5 APG)", ranking: 1, startingLineup: ["Darius Garland", "Donovan Mitchell", "Isaac Okoro", "Evan Mobley", "Jarrett Allen"] },
           "boston-celtics": { name: "Boston Celtics", wins: 9, losses: 3, points: 120.2, pointsAgainst: 110.6, topScorer: "Jayson Tatum (29.7 PPG)", rebounds: "Jayson Tatum (8.2 RPG)", assists: "Jaylen Brown (4.7 APG)", ranking: 2, startingLineup: ["Jrue Holiday", "Derrick White", "Jaylen Brown", "Jayson Tatum", "Al Horford"] },
@@ -133,7 +133,7 @@ const Analytics = () => {
   const f1Data = {
     competitions: {
       championship: {
-        name: "Formula 1 2024 Championship",
+        name: "Formula 1 2024 Championship (Current Season)",
         drivers: {
           "max-verstappen": { name: "Max Verstappen", team: "Red Bull Racing", points: 393, wins: 9, podiums: 15, poles: 8, fastestLaps: 3, ranking: 1 },
           "lando-norris": { name: "Lando Norris", team: "McLaren", points: 331, wins: 3, podiums: 12, poles: 4, fastestLaps: 2, ranking: 2 },

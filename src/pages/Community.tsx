@@ -105,10 +105,20 @@ const Community = () => {
                 </div>
 
                 <div className="space-y-3">
-                  <Button variant="hero" size="lg" className="w-full">
+                  <Button 
+                    variant="hero" 
+                    size="lg" 
+                    className="w-full"
+                    onClick={() => window.open('https://discord.gg/9hxz8wXzjs', '_blank')}
+                  >
                     Join Our Discord
                   </Button>
-                  <Button variant="outline" size="lg" className="w-full">
+                  <Button 
+                    variant="outline" 
+                    size="lg" 
+                    className="w-full"
+                    onClick={() => window.open('https://www.instagram.com/bulldogsportsanalyticsclub/', '_blank')}
+                  >
                     Follow on Instagram
                   </Button>
                 </div>

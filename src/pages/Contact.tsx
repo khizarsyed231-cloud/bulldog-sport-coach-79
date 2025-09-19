@@ -16,7 +16,7 @@ const Contact = () => {
       name: "Instagram",
       description: "Follow us for daily motivation, athlete spotlights, and behind-the-scenes content.",
       icon: "📸",
-      url: "#", // TODO: Replace with actual Instagram URL
+      url: "https://www.instagram.com/bulldogsportsanalyticsclub/",
       buttonText: "Follow on Instagram"
     },
     {
