@@ -119,34 +119,44 @@ const AIAdvisor = () => {
       let dietComposition = "";
       let gymExercises = "";
       
-      // Specific nutrition recommendations with proper TDEE calculation
+      // Modern athlete nutrition standards with specific food recommendations
       if (caloriesNum && weightNum) {
-        const proteinGrams = Math.round(weightNum * 1.2); // 1.2g per lb for athletes
-        const fatGrams = Math.round(weightNum * 0.4); // 0.4g per lb
+        const proteinGrams = Math.round(weightNum * 1.6); // 1.6g per lb for elite athletes (updated 2025 standards)
+        const fatGrams = Math.round(weightNum * 0.5); // 0.5g per lb for hormone optimization
         
-        // Proper BMR calculation using Mifflin-St Jeor equation (simplified)
-        const heightInches = heightNum || 70; // default to 70 inches if not provided
-        const estimatedBMR = Math.round((10 * (weightNum * 0.453592)) + (6.25 * (heightInches * 2.54)) + 5); // convert lbs to kg, inches to cm
-        const estimatedTDEE = Math.round(estimatedBMR * 1.6); // moderate activity multiplier for athletes
+        // Updated BMR calculation using Mifflin-St Jeor equation
+        const heightInches = heightNum || 70;
+        const weightKg = weightNum * 0.453592;
+        const heightCm = heightInches * 2.54;
+        const estimatedBMR = Math.round((10 * weightKg) + (6.25 * heightCm) - (5 * 25) + 5); // assuming 25 years old
+        const estimatedTDEE = Math.round(estimatedBMR * 1.8); // high activity multiplier for athletes
         
-        // Adjust for current intake vs needs
-        if (caloriesNum < estimatedTDEE - 300) {
-          nutritionAdvice = `increase intake to ${estimatedTDEE} calories daily for optimal performance`;
-          dietComposition = `eat ${proteinGrams}g protein, ${fatGrams}g healthy fats, fill remaining calories with complex carbs`;
-        } else if (caloriesNum > estimatedTDEE + 300) {
-          nutritionAdvice = `maintain around ${estimatedTDEE} calories daily to optimize body composition`;
-          dietComposition = `focus on ${proteinGrams}g protein, ${fatGrams}g fats, moderate carbs around training`;
+        // Calculate carb needs for performance
+        const carbGrams = Math.round((estimatedTDEE - (proteinGrams * 4) - (fatGrams * 9)) / 4);
+        
+        // Food recommendations
+        const proteinFoods = "chicken breast (31g/100g), lean beef (26g/100g), salmon (25g/100g), Greek yogurt (20g/cup), eggs (6g/egg)";
+        const fatFoods = "avocado (21g/medium), nuts/seeds (15-20g/oz), olive oil (14g/tbsp), fatty fish omega-3s";
+        const carbFoods = "oats (27g/cup), sweet potato (26g/medium), rice (45g/cup), bananas (27g/large)";
+        
+        if (caloriesNum < estimatedTDEE - 400) {
+          nutritionAdvice = `increase to ${estimatedTDEE} calories for peak performance and recovery`;
+          dietComposition = `${proteinGrams}g protein (${proteinFoods}), ${fatGrams}g fats (${fatFoods}), ${carbGrams}g carbs (${carbFoods})`;
+        } else if (caloriesNum > estimatedTDEE + 400) {
+          nutritionAdvice = `optimize at ${estimatedTDEE} calories for lean muscle and performance`;
+          dietComposition = `prioritize ${proteinGrams}g protein (${proteinFoods}), ${fatGrams}g healthy fats (${fatFoods}), time carbs around training`;
         } else {
-          nutritionAdvice = `your current ${caloriesNum} calories looks good for your size`;
-          dietComposition = `continue with ${proteinGrams}g protein, ${fatGrams}g healthy fats daily`;
+          nutritionAdvice = `maintain ${caloriesNum} calories - excellent for your training demands`;
+          dietComposition = `continue ${proteinGrams}g protein (${proteinFoods}), ${fatGrams}g fats (${fatFoods}), ${carbGrams}g carbs (${carbFoods})`;
         }
       } else if (weightNum) {
-        const proteinGrams = Math.round(weightNum * 1.2);
-        nutritionAdvice = "focus on whole foods: lean meats, fish, eggs, oats, rice, vegetables";
-        dietComposition = `aim for ${proteinGrams}g protein daily, eat every 3-4 hours`;
+        const proteinGrams = Math.round(weightNum * 1.6);
+        const fatGrams = Math.round(weightNum * 0.5);
+        nutritionAdvice = "focus on nutrient timing and food quality for optimal performance";
+        dietComposition = `${proteinGrams}g protein from lean meats/fish/eggs, ${fatGrams}g fats from nuts/avocado/olive oil, complex carbs from oats/rice/sweet potatoes`;
       } else {
-        nutritionAdvice = "eat lean proteins, complex carbs, and healthy fats from whole food sources";
-        dietComposition = "aim for 1.2g protein per lb bodyweight, eat 4-5 balanced meals daily";
+        nutritionAdvice = "follow modern athlete nutrition protocols with precise macronutrient timing";
+        dietComposition = "1.6g protein per lb (chicken, fish, eggs), 0.5g fats per lb (nuts, avocado), 2-3g carbs per lb on training days";
       }
       
       // Sport-specific training recommendations

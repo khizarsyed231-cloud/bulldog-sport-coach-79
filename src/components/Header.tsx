@@ -43,6 +43,9 @@ const Header = () => {
           <a href="/community" className="text-foreground hover:text-primary transition-smooth text-sm font-medium px-3 py-2 rounded-md hover:bg-primary/10">
             Community
           </a>
+          <a href="/athlete-hub" className="text-foreground hover:text-primary transition-smooth text-sm font-medium px-3 py-2 rounded-md hover:bg-primary/10">
+            Athlete Hub
+          </a>
           <a href="/contact" className="text-foreground hover:text-primary transition-smooth text-sm font-medium px-3 py-2 rounded-md hover:bg-primary/10">
             Contact
           </a>

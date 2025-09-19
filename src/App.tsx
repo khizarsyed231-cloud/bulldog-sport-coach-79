@@ -12,6 +12,7 @@ import Community from "./pages/Community";
 import Contact from "./pages/Contact";
 import Services from "./pages/Services";
 import Analytics from "./pages/Analytics";
+import AthleteHub from "./pages/AthleteHub";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -32,6 +33,7 @@ const App = () => (
             <Route path="/contact" element={<Contact />} />
             <Route path="/services" element={<Services />} />
             <Route path="/analytics" element={<Analytics />} />
+            <Route path="/athlete-hub" element={<AthleteHub />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
